@@ -50,3 +50,7 @@ void UartIDF::write(char *cmd, size_t len)
     uart_wait_tx_done(_uartNum, 100 / portTICK_RATE_MS);
   }
 }
+
+void UartIDF::uartDelete(){
+  uart_driver_delete(_uartNum);
+}

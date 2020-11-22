@@ -15,6 +15,7 @@ class UartIDF {
         void uartInitDevice(int txPin, int rxPin, int baudrate, int uartNum, uart_word_length_t dataBits, uart_stop_bits_t stopBits);
         void write(char *com, size_t len);
         char *read();
+        void uartDelete();
         ~UartIDF();
 };
 
